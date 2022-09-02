@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@drawable/item_back"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/icon"
+        android:maxEms="6"
+        android:singleLine="true" 
+        android:ellipsize="marquee"
+        android:textColor="#03A9F4"
+        android:text="appname" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/name"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/bg_cyan_boll"
+         android:gravity="center"
+        android:maxEms="4"
+        android:singleLine="true" 
+        android:ellipsize="marquee"
+        android:text="author" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/opration"
+        android:singleLine="true" 
+        android:ellipsize="marquee"
+        android:scrollbars="vertical"
+        android:textColor="#FF00EA07"
+        android:text="info" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/opration"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_red_boll"
+        android:gravity="center"
+        android:text="version"
+        android:maxEms="6"
+        android:singleLine="true" 
+        android:ellipsize="marquee"
+        android:textColor="#FFFFFF" />
+
+    <com.saki.ui.SwitchButton
+        android:id="@+id/opration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/info" />
+    <com.saki.ui.view.DownloadButton
+        android:id="@+id/down"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/info"
+        android:layout_alignStart="@+id/icon" />
+</RelativeLayout>

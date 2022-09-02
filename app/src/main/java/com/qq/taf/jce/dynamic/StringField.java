@@ -1,0 +1,23 @@
+package com.qq.taf.jce.dynamic;
+
+public class StringField
+  extends JceField
+{
+  private String data;
+  
+  StringField(String data, int tag)
+  {
+    super(tag);
+    this.data = data;
+  }
+  
+  public String get()
+  {
+    return this.data;
+  }
+  
+  public void set(String s)
+  {
+    this.data = s;
+  }
+}

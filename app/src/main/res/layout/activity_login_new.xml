@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/main_drawer_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:clickable="true"
+	android:background="@android:color/transparent">
+
+	<RelativeLayout
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#7adfb8">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true">
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dip"
+                    layout="@layout/input_layout"/>
+
+                <include
+                    android:id="@+id/layout_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dip"
+                    layout="@layout/layout_progress"
+                    android:visibility="gone"/>
+                
+                <Button
+                    android:id="@+id/main_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Login"
+                    android:background="@drawable/btn_stroke"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"/>
+
+                <Button
+                    android:onClick="authority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="自助授权"
+                    android:background="@drawable/btn_stroke"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+		</RelativeLayout>
+
+		<com.saki.ui.view.UpdateView
+			android:id="@+id/updateView1"
+			android:layout_width="wrap_content"
+			android:layout_height="30dp"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentStart="true"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="提示:左滑进行设备信息设置"
+			android:layout_above="@id/updateView1"
+			android:layout_centerInParent="true"/>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/main_left_drawer_layout"
+		android:layout_width="300dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:background="#7adfb8"
+		android:orientation="vertical">
+
+		<fragment
+			android:id="@+id/fragment_sqsetting"
+			android:layout_width="match_parent"
+			class="com.saki.ui.DeviceSettingFragment"
+			android:layout_height="match_parent"/>
+
+	</LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
+

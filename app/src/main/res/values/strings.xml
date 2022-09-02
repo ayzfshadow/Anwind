@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Anwind</string>
+    <string name="autoLogin">自动登录</string>
+    <string name="Remember">记住密码</string>
+    <string name="Login">登录</string>
+    <string name="Account">账号</string>
+    <string name="PassWord">密码</string>
+    <string name="codeLost">未授权</string>
+	<string name="imei">868209161547921</string>
+	<string name="oldcode">客户端版本过低，请更新您的客户端！</string>
+	<string name="lostlink">连接服务器失败，请检查网络设置</string>
+    <string name="key1">欢迎使用Anwind,本程序的自助授权仅可以查询授权和卡密，如需授权账号请使用影殇机器人进行授权\n感谢支持</string>
+    <string name="key2">机器QQ</string>
+    <string name="key3">查询授权</string>
+    <string name="key4">查询卡密</string>
+    <string name="key5">确定</string>
+</resources>

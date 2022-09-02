@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bg_account">
+
+	<android.support.v4.widget.SwipeRefreshLayout
+		android:id="@+id/swipe"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/textView1"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/promote">
+
+		<ListView
+			android:id="@+id/applist"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		</ListView>
+
+	</android.support.v4.widget.SwipeRefreshLayout>
+
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentRight="true"
+		android:gravity="center_horizontal"
+		android:textColor="#00FF00"
+		android:text="TIPS：下拉刷新重载插件，长按可以卸载插件"
+		android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
